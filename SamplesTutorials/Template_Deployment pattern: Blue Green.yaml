@@ -1,6 +1,6 @@
 # Exported from:        http://release-nightly.devops.dev.digitalai.cloud/
-# Release version:      25.1.0-403.915
-# Date created:         Fri Apr 04 09:17:08 GMT 2025
+# Release version:      25.3.0-beta.404
+# Date created:         Fri Apr 04 09:53:16 GMT 2025
 
 ---
 apiVersion: xl-release/v1
@@ -141,6 +141,11 @@ spec:
     tasks:
     - name: New task
       type: xlrelease.Task
+  - phase: Phase2
+    tasks:
+    - name: New task
+      type: xlrelease.Task
+    color: "#3d6c9e"
   variables:
   - type: xlrelease.StringVariable
     key: application
@@ -162,5 +167,4 @@ spec:
       variableMapping:
         values: "${global.blue-green.environments}"
   scriptUsername: admin
-  scriptUserPassword: !value "xlrelease_Release_Deployment_pattern__Blue_Green_scriptUserPassword"
   riskProfile: Default risk profile
